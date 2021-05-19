@@ -3,6 +3,7 @@
     "name": "startbootstrap-clean-blog",
     "version": "5.1.0",
     "scripts": {
+        "predeploy": "npm run build",
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
@@ -10,7 +11,8 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start:debug": "npm run build && node scripts/start-debug.js",
+        "deploy": "gh-pages -d build"
     },
     "description": "Clean Blog is a Medium inspired blog theme for Bootstrap.",
     "keywords": [
@@ -21,7 +23,7 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/clean-blog",
+    "homepage": "https://appsec-asia2.github.com",
     "bugs": {
         "url": "https://github.com/StartBootstrap/startbootstrap-clean-blog/issues",
         "email": "feedback@startbootstrap.com"
@@ -51,3 +53,4 @@
         "upath": "2.0.1"
     }
 }
+
